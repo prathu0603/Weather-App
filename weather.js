@@ -17,7 +17,7 @@ searchButton.addEventListener("click", () => {
 async function getWeatherData(city) {
   try {
     const API_key = "1a81832072406ce1015998be05ebaa4c";
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`;
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`;
 
     const response = await fetch(api, { mode: "cors" });
     const weatherData = await response.json();
@@ -51,7 +51,7 @@ async function getWeatherData(city) {
     if (icon == "01n") tempicon.src = "LogoN/clearNight.gif";
 
     // Air Quality Index
-    const api2 = `http://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lon}&key=57127ca4-7883-4ad5-be93-f126a9ee243b`;
+    const api2 = `https://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lon}&key=57127ca4-7883-4ad5-be93-f126a9ee243b`;
     fetch(api2)
       .then((response) => response.json())
       .then((data) => {
@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
 
       // const proxy = 'https://cors-anywhere.herokuapp.com/';
       const API_key = "1a81832072406ce1015998be05ebaa4c";
-      const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_key}`;
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_key}`;
 
       fetch(api, { mode: "cors" })
         .then((response) => response.json())
@@ -109,7 +109,7 @@ window.addEventListener("load", () => {
         });
 
       // Air Quality Index
-      const api2 = `http://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${long}&key=57127ca4-7883-4ad5-be93-f126a9ee243b`;
+      const api2 = `https://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${long}&key=57127ca4-7883-4ad5-be93-f126a9ee243b`;
       fetch(api2)
         .then((response) => response.json())
         .then((data) => {
