@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="weather.css" />
+    <script src="weather.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="search..."
+          autofocus
+          required
+        />
+        <button id="search-btn">Go</button>
+      </div>
+      <div class="weather-info">
+        <div class="box">
+          <h1 id="city-name">-------</h1>
+          <img id="temp-icon" src="Logo/Barometer.gif" alt="You no Support" />
+        </div>
+        <div class="box2">
+          <p>
+            <span id="temperature"></span>
+            <span id="temperature-degree">&#8451;</span>
+          </p>
+          <h3 id="description">-------</h3>
+          <h3><span>Aqi :</span> <span id="air-quality">------</span></h3>
+          <h3>
+            <span>Humidity :</span> <span id="humidity">------</span>
+            <span>%</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
